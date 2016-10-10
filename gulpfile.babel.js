@@ -27,12 +27,12 @@ import imagemin from 'gulp-imagemin';
 //import jshint from 'gulp-jshint';
 //import jscs from 'gulp-jscs';
 
-// Clean output directory
+// 清空输出文件夹
 gulp.task('clean', () => del(['dist/*', '!dist/.git', 'src/styles/*', 'src/plugins/*'], {
   dot: true,
 }));
 
-// copy bootstrap fonts
+// 复制bootstrap字体到dist根目录
 gulp.task('copy:fonts',()=>{
   return gulp.src([
       'node_modules/bootstrap-sass/assets/fonts/**/*',
@@ -41,7 +41,7 @@ gulp.task('copy:fonts',()=>{
       .pipe(gulp.dest('dist/fonts'));
 });
 
-// copy images
+// 复制src/images目录到dist/images
 gulp.task('copy:images',()=>{
   return gulp.src([
       'src/images/**/*'
@@ -54,7 +54,7 @@ gulp.task('copy:images',()=>{
       .pipe(gulp.dest('dist/images'));
 });
 
-// copy scripts files
+// 复制项目引用插件到dist/plugins和src/plugins
 gulp.task('copy:plugins', () => {
   return gulp.src([
     'node_modules/jquery/dist/*.js',
@@ -73,7 +73,7 @@ gulp.task('copy:plugins', () => {
       .pipe(gulp.dest('dist/plugins'));
 });
 
-// copy src html files
+// 复制src根目录的html文件到dist根目录
 gulp.task('copy:html', () => {
   return gulp.src([
     'src/**/*.html',
@@ -83,7 +83,7 @@ gulp.task('copy:html', () => {
       .pipe(gulp.dest('dist'));
 });
 
-// compile scss file
+// 编译输出scss文件，分别到dist/styles和src/styles
 gulp.task('styles', () => {
 
   const AUTOPREFIXER_BROWSERS = [
@@ -114,7 +114,7 @@ gulp.task('styles', () => {
       .pipe(gulp.dest('dist/styles'));
 });
 
-// compile javascript
+// 编译输出javascript文件，分别到src/scripts和dist/scripts
 gulp.task('scripts', () => {
   var sourceFiles = glob.sync('src/scripts/**/*.js');
   var b = browserify({
@@ -135,6 +135,7 @@ gulp.task('scripts', () => {
 
 });
 
+// 自动刷新浏览器
 gulp.task('serve', [], () => {
   browserSync({
     notify: false,
@@ -148,6 +149,10 @@ gulp.task('serve', [], () => {
   gulp.watch(['src/scss/**/*.scss'], ['styles', browserSync.reload]);
 });
 
+
+// 默认任务
+// 复制字体、复制图像、复制插件、复制html文件、
+// 编译scss文件、编译javascript文件、
 gulp.task('default', ['clean'], cb => {
   runSequence(
       ['copy:fonts'],

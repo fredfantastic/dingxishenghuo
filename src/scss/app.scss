@@ -1,9 +1,15 @@
 @charset "UTF-8";
 
-/* ding xi sheng huo wang yang shi wen jian */
-@import "dingxishenghuo/variables";
+/*！
+ * 定西生活网css文件
+ * 甘肃天奇
+ * 2016-10-11
+ */
 
+// bootstrap-sass样式
 @import "bootstrap/bootstrap-custom";
 
+// custom scss
+@import "dingxishenghuo/variables";
 @import "dingxishenghuo/common";
 @import "dingxishenghuo/nav";

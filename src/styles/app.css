@@ -1,5 +1,9 @@
 @charset "UTF-8";
-/* ding xi sheng huo wang yang shi wen jian */
+/*！
+ * 定西生活网css文件
+ * 甘肃天奇
+ * 2016-10-11
+ */
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -5751,12 +5755,21 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-/* common scss */
-/* 所有共用的类都放在这个下面 */
+/*！
+ * scss变量
+ *
+ */
+/*！
+ * 共用样式
+ *
+ */
 body {
   font-family: "Microsoft YaHei UI" ,"Microsoft YaHei UI Light"; }
 
 .margin-top-70 {
   margin-top: 70px; }
 
-/* header scss file */
+/*！
+ * 导航样式
+ *
+ */
