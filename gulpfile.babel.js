@@ -59,7 +59,7 @@ gulp.task('copy:plugins', () => {
   return gulp.src([
     'node_modules/jquery/dist/*.js',
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
-    'node_modules/font-awesome/**/*',
+    'node_modules/font-awesome/**/*.{css,map,oft,svg,eot,ttf,woff,woff2}',
 
   ], {
     dot: true,
