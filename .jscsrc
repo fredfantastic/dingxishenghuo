@@ -1,0 +1,11 @@
+{
+  "preset": "airbnb",
+  "maxErrors":10000,
+  "maximumLineLength": {
+    "value": 130,
+    "allExcept": ["urlComments"]
+  },
+  "requireShorthandArrowFunctions": false,
+  "excludeFiles": ["node_modules/**","gulpfile.babel.js"],
+  "validateIndentation": 2,
+}

@@ -1,0 +1,50 @@
+{
+  "name": "dingxishenghuo",
+  "version": "1.0.0",
+  "description": "ding xi sheng huo wang qian tai mu ban",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buuug7/dingxishenghuo.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "dingxi"
+  ],
+  "author": "buuug7,YANJF123",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buuug7/dingxishenghuo/issues"
+  },
+  "homepage": "https://github.com/buuug7/dingxishenghuo#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^1.12.4"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.16.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.17.1",
+    "browserify": "^13.1.0",
+    "del": "^2.2.2",
+    "font-awesome": "^4.6.3",
+    "glob": "^7.1.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-jscs": "^4.0.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-newer": "^1.3.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.9.3",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
