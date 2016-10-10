@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
 /* ding xi sheng huo wang yang shi wen jian */
+@import "dingxishenghuo/variables";
 
-@import "dingxishenghuo/header";
+@import "bootstrap/bootstrap-custom";
+
+@import "dingxishenghuo/common";
+@import "dingxishenghuo/nav";

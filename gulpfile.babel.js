@@ -20,6 +20,7 @@ import gutil from 'gulp-util';
 import uglify from 'gulp-uglify';
 import del from 'del';
 import runSequence from 'run-sequence';
+import imagemin from 'gulp-imagemin';
 //import cssnano from 'gulp-cssnano';
 
 //import cssnano from 'gulp-cssnano';
@@ -31,11 +32,33 @@ gulp.task('clean', () => del(['dist/*', '!dist/.git', 'src/styles/*', 'src/plugi
   dot: true,
 }));
 
+// copy bootstrap fonts
+gulp.task('copy:fonts',()=>{
+  return gulp.src([
+      'node_modules/bootstrap-sass/assets/fonts/**/*',
+  ])
+      .pipe(size())
+      .pipe(gulp.dest('dist/fonts'));
+});
+
+// copy images
+gulp.task('copy:images',()=>{
+  return gulp.src([
+      'src/images/**/*'
+  ])
+      .pipe(imagemin({
+        progressive: true,
+        interlaced: true
+      }))
+      .pipe(size())
+      .pipe(gulp.dest('dist/images'));
+});
+
 // copy scripts files
 gulp.task('copy:plugins', () => {
   return gulp.src([
-    'node_modules/jquery/**/*',
-    'node_modules/bootstrap/**/*',
+    'node_modules/jquery/dist/*.js',
+    'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
     'node_modules/font-awesome/**/*',
 
   ], {
@@ -120,12 +143,15 @@ gulp.task('serve', [], () => {
     port: 3001,
   });
   gulp.watch(['src/**/*.html'], ['copy:html', browserSync.reload]);
+  gulp.watch(['src/images/**/*.{svg,png,jpg}'], ['copy:images', browserSync.reload]);
   gulp.watch(['src/scripts/**/*.js'], ['scripts', browserSync.reload]);
   gulp.watch(['src/scss/**/*.scss'], ['styles', browserSync.reload]);
 });
 
 gulp.task('default', ['clean'], cb => {
   runSequence(
+      ['copy:fonts'],
+      ['copy:images'],
       ['copy:plugins'],
       ['copy:html'],
       ['styles'],
