@@ -19,7 +19,8 @@ import buffer from 'vinyl-buffer';
 import gutil from 'gulp-util';
 import uglify from 'gulp-uglify';
 import del from 'del';
-import cssnano from 'gulp-cssnano';
+import runSequence from 'run-sequence';
+//import cssnano from 'gulp-cssnano';
 
 //import cssnano from 'gulp-cssnano';
 //import jshint from 'gulp-jshint';
@@ -111,7 +112,7 @@ gulp.task('scripts', () => {
 
 });
 
-gulp.task('serve', ['clean', 'copy:plugins', 'copy:html', 'copy:plugins', 'styles'], () => {
+gulp.task('serve', [], () => {
   browserSync({
     notify: false,
     logPrefix: 'b7',
@@ -123,4 +124,12 @@ gulp.task('serve', ['clean', 'copy:plugins', 'copy:html', 'copy:plugins', 'style
   gulp.watch(['src/scss/**/*.scss'], ['styles', browserSync.reload]);
 });
 
-gulp.task('default', ['clean','serve']);
+gulp.task('default', ['clean'], cb => {
+  runSequence(
+      ['copy:plugins'],
+      ['copy:html'],
+      ['styles'],
+      ['scripts'],
+      ['serve'],
+      cb);
+});

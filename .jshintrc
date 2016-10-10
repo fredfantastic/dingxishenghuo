@@ -13,6 +13,7 @@
   "strict": true,
   "sub": true,
   "globals": {
-    "componentHandler": true
+    "componentHandler": true,
+    "$": false
   }
 }

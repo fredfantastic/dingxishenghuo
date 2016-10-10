@@ -8,4 +8,5 @@
   "requireShorthandArrowFunctions": false,
   "excludeFiles": ["node_modules/**","gulpfile.babel.js"],
   "validateIndentation": 2,
+  "validateLineBreaks": "LF"
 }

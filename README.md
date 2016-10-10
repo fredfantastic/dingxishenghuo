@@ -1,9 +1,5 @@
 ## 定西生活网前台模板
 
-
-
-
-
 #### 使用框架
 + bootstrap 3.3.7
 
@@ -12,5 +8,9 @@
 
 #### 构建工具
 + 包管理器npm
-+ 构建工具gulp
++ gulp
++ sass
++ autoprefixer
++ babelify
++ es6
 
