@@ -1,6 +1,6 @@
 /**
  * Created by Administrator on 2016/10/10.
- * gou jian gongju
+ * gulp构建工具
  */
 
 'use strict';

@@ -4,9 +4,19 @@
  */
 
 body{
-  font-family: "Microsoft YaHei UI" ,"Microsoft YaHei UI Light";
+  font-family:"Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, arial, Tahoma, SimSun, sans-serif;
+  background-color:rgb(248, 248, 248);
 }
 
 .margin-top-70{
   margin-top:70px;
+}
+
+.btn-dx-rect{
+  border-radius: 0;
+}
+
+.btn-dx{
+  background: #fff;
+  color:#FE6441;
 }

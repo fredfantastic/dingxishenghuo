@@ -2,3 +2,15 @@
  * scss变量
  *
  */
+
+// 全局变量
+$theme: #FE6441; //#FE6441
+$theme-navbar-font-color: #fff;
+
+// 导航条
+$navbar-height-dx: 60px;
+$navbar-dx-bg: $theme;
+$navbar-dx-color-font: $theme-navbar-font-color;
+$navbar-padding-horizontal-dx: floor(($grid-gutter-width / 2)) !default;
+$navbar-padding-vertical-dx: (($navbar-height-dx - $line-height-computed) / 2) !default;
+$navbar-border-radius-dx: 0;

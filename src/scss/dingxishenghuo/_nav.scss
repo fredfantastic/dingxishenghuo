@@ -3,6 +3,185 @@
  *
  */
 
-.navbar-dingxi{
 
+// 导航元素垂直居中
+@mixin navbar-vertical-align-dx($element-height) {
+  margin-top: (($navbar-height-dx - $element-height) / 2);
+  margin-bottom: (($navbar-height-dx - $element-height) / 2);
+}
+
+
+// Default navbar
+.navbar-dx {
+  min-height: $navbar-height-dx;
+  background-color: $navbar-dx-bg;
+  border-color: $navbar-dx-bg;
+  border-bottom:1px solid #ebebeb;
+
+  @media (min-width: $grid-float-breakpoint) {
+    border-radius: $navbar-border-radius-dx;
+  }
+
+  .navbar-brand {
+    color: $navbar-dx-color-font;
+    height: $navbar-height-dx;
+    //padding: $navbar-padding-vertical-dx $navbar-padding-horizontal-dx;
+    padding:0;
+    &:hover,
+    &:focus {
+      color: $navbar-default-brand-hover-color;
+      background-color: $navbar-default-brand-hover-bg;
+    }
+  }
+
+
+  .navbar-btn {
+    @include navbar-vertical-align-dx($input-height-base);
+  }
+
+  .navbar-text {
+    color: $navbar-default-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: $navbar-dx-color-font;
+
+      &:hover,
+      &:focus {
+        color: $navbar-dx-color-font;
+        background-color: $navbar-default-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-default-link-active-color;
+        background-color: $navbar-default-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-default-link-disabled-color;
+        background-color: $navbar-default-link-disabled-bg;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    border-color: #fff;
+    border-radius: 0;
+    &:hover,
+    &:focus {
+      background-color: $theme;
+    }
+    .icon-bar {
+      background-color: #fff;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $navbar-default-border;
+  }
+  .navbar-form{
+    @include navbar-vertical-align-dx($input-height-base);
+    .form-group input{
+      border-radius: 0;
+    }
+    .form-group .form-control{
+      border: 1px solid $navbar-dx-bg;
+      @include form-control-focus(darken($navbar-dx-bg,15%));
+    }
+  }
+
+  // Dropdown menu items
+  .navbar-nav {
+    >li > .dropdown-menu{
+      @include border-bottom-radius(0);
+    }
+    // Remove background color from open dropdown
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $navbar-dx-bg;
+        color: $theme-navbar-font-color;
+      }
+    }
+
+    // Uncollapse the nav
+    @media (min-width: $grid-float-breakpoint) {
+      float: left;
+      margin: 0;
+
+      > li {
+        float: left;
+        > a {
+          padding-top: $navbar-padding-vertical-dx;
+          padding-bottom: $navbar-padding-vertical-dx;
+        }
+      }
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      // Dropdowns get custom display when collapsed
+      .open .dropdown-menu {
+        > li > a {
+          color: $navbar-dx-color-font;
+          &:hover,
+          &:focus {
+            color: $navbar-dx-color-font;
+            background-color: $navbar-default-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-default-link-active-color;
+            background-color: $navbar-default-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-default-link-disabled-color;
+            background-color: $navbar-default-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+
+  // Links in navbars
+  //
+  // Add a class to ensure links outside the navbar nav are colored correctly.
+
+  .navbar-link {
+    color: $navbar-default-link-color;
+    &:hover {
+      color: $navbar-default-link-hover-color;
+    }
+  }
+
+  .btn-link {
+    color: $navbar-default-link-color;
+    &:hover,
+    &:focus {
+      color: $navbar-default-link-hover-color;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus {
+        color: $navbar-default-link-disabled-color;
+      }
+    }
+  }
 }
