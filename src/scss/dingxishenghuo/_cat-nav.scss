@@ -1,0 +1,42 @@
+/*！
+ * 首页栏目
+ *
+ */
+
+.cat{
+  text-align: center;
+  padding:10px 0;
+  border-left: 1px solid lighten($theme,37%);
+  border-right: 1px solid lighten($theme,37%);
+  background-color: lighten($theme,37%);
+  h4{
+    font-size: 1.2em;
+
+    &>a{
+      text-decoration: none;
+      color:#555;
+    }
+  }
+}
+
+.breadcrumb-cat {
+  padding:0;
+  margin-bottom: 0;
+  list-style: none;
+  background-color: transparent;
+  border-radius: $border-radius-base;
+  > li {
+    display: inline-block;
+    + li:before {
+      // [converter] Workaround for https://github.com/sass/libsass/issues/1115
+      $nbsp: "\00a0";
+      content: "#{$breadcrumb-separator}#{$nbsp}"; // Unicode space added since inline-block means non-collapsing white-space
+      padding: 0;
+      color: $breadcrumb-color;
+    }
+  }
+
+  > .active {
+    color: $breadcrumb-active-color;
+  }
+};

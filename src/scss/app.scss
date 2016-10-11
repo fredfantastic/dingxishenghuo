@@ -12,7 +12,12 @@
 // custom scss
 @import "dingxishenghuo/variables";
 @import "dingxishenghuo/common";
+
+// 导航样式
 @import "dingxishenghuo/nav";
+
+// 首页栏目
+@import "dingxishenghuo/cat-nav";
 
 // 新闻资讯内容页样式
 @import "dingxishenghuo/zixun-content";
