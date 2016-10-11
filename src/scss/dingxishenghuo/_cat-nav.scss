@@ -8,13 +8,21 @@
   padding:10px 0;
   border-left: 1px solid lighten($theme,37%);
   border-right: 1px solid lighten($theme,37%);
-  background-color: lighten($theme,37%);
+  //background-color: lighten($theme,37%);
   h4{
     font-size: 1.2em;
 
     &>a{
       text-decoration: none;
       color:#555;
+    }
+    &>a:hover{
+      color:$theme;
+    }
+  }
+  ol li>a{
+    &:hover{
+      color:$theme;
     }
   }
 }

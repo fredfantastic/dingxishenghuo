@@ -16,7 +16,7 @@
   min-height: $navbar-height-dx;
   background-color: $navbar-dx-bg;
   border-color: $navbar-dx-bg;
-  border-bottom:1px solid #ebebeb;
+  border-bottom:1px solid $navbar-dx-bg;
 
   @media (min-width: $grid-float-breakpoint) {
     border-radius: $navbar-border-radius-dx;
