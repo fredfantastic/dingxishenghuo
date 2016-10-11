@@ -4,22 +4,48 @@
  */
 
 .footer-dx {
-  background-color: #F8F8F8;
-  //微信公众号
-  .footer-wxgzh{
-    text-align: center;
-    ul li {
-      line-height: 30px;
-      a {
-        font-size: 18px;
-        color: #000;
-      }
+padding: 50px 0 20px 0;
+  background-color: #000000;
+  color: #FFFFFF;
+  h3 {
+    margin: 0 0 20px 0 ;
+    font-size: 1.2em;
+  }
+  ul li {
+    line-height: 30px;
+    a {
+      font-size: 1.1em;
+      color: #566266;
     }
   }
 
-  //页脚友情链接样式
-  .footer-yqlj{
-    text-align: center;
+  //关于我们
+  .footer-gywm {
+
+  }
+
+  //信息分类
+  .footer-xxfl {
+  }
+
+  //帮助中心
+  .footer-bzzx {
+
+  }
+
+  //服务支持
+  .footer-fwzc {
+
+  }
+
+  //甘肃天奇
+  .footer-gstq{
+
+  }
+
+  //微信公众号
+  .footer-wxgzh {
+
     .footer-icon {
       p {
         text-align: left;
@@ -27,53 +53,24 @@
       i {
         font-size: 18px;
         margin: 3px 5px;
-        color: #F84530;
+        color: #ffffff;
         transition: all 0.5s ease-in-out;
       }
       i:hover {
         transform: scale(1.8);
-        color: darken(#F84530, 10%)
+        color: darken(#44AC35, 10%)
       }
     }
   }
 
-  //页脚关于我们样式
-  .footer-gywm {
-    text-align: center;
-    ul li {
-      line-height: 30px;
-      a {
-        font-size: 18px;
-        color: #000;
-      }
-    }
-  }
-
-  //页脚联系我们样式
-  .footer-lxwm  {
-    text-align: center;
-    .footer-right-button {
-      /*border-radius: 0 !important; */
-      margin-top: 10px;
-      background-color: darken(#F8F8F8, 1%);
-      border: 1px solid darken(#DDDDDD, 10%);
-      transition: all 0.5s ease-in-out;
-    }
-    .footer-right-button:hover {
-      transform: scale(1.1);
-      background-color: darken(#F8F8F8, 15%);
-      color: #000;
-    }
-  }
-
-  h3{
-    text-align: center;
-  }
 }
 
 .footer-copyright-dx {
-  background-color: darken(#F8F8F8, 10%);
+  background-color: #000000;
+  border-top:1px solid#222222;
   p {
-    margin: 3px 0;
+    text-align: center;
+    margin: 20px 0;
+    color: #999999;
   }
 }
