@@ -5,8 +5,10 @@
 
 .footer-dx {
 padding: 50px 0 20px 0;
-  background-color: #000000;
-  color: #FFFFFF;
+//  background-color: #000000;
+  background-color: #ffffff;
+  //background-color:darken(rgb(248, 248, 248),15%);
+  color:#555;
   h3 {
     margin: 0 0 20px 0 ;
     font-size: 1.2em;
@@ -53,12 +55,12 @@ padding: 50px 0 20px 0;
       i {
         font-size: 18px;
         margin: 3px 5px;
-        color: #ffffff;
+        color: darken($theme, 10%);
         transition: all 0.5s ease-in-out;
       }
       i:hover {
         transform: scale(1.8);
-        color: darken(#44AC35, 10%)
+        color: darken($theme, 20%);
       }
     }
   }
@@ -66,8 +68,9 @@ padding: 50px 0 20px 0;
 }
 
 .footer-copyright-dx {
-  background-color: #000000;
-  border-top:1px solid#222222;
+  //background-color: #000000;
+  background-color:darken(#fff,2%);
+  border-top:1px solid darken(#fff,13%);
   p {
     text-align: center;
     margin: 20px 0;
