@@ -1,7 +1,5 @@
 /*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+* 复制bootstrap输出文件
  */
 
 // Core variables and mixins
@@ -47,7 +45,7 @@
 
 // Components w/ JavaScript
 @import "bootstrap/modals";
-@import "bootstrap/tooltip";
+//@import "bootstrap/tooltip";
 @import "bootstrap/popovers";
 @import "bootstrap/carousel";
 
