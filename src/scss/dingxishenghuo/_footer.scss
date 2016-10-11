@@ -4,13 +4,13 @@
  */
 
 .footer-dx {
-padding: 50px 0 20px 0;
-//  background-color: #000000;
+  padding: 50px 0 20px 0;
+  //  background-color: #000000;
   background-color: #ffffff;
   //background-color:darken(rgb(248, 248, 248),15%);
-  color:#555;
+  color: #555;
   h3 {
-    margin: 0 0 20px 0 ;
+    margin: 0 0 20px 0;
     font-size: 1.2em;
   }
   ul li {
@@ -22,13 +22,16 @@ padding: 50px 0 20px 0;
   }
 
   //关于我们
-  .footer-gywm {
-
+  .footer-lxwm {
+    i {
+      color: #F12E01;
+      font-size: 15px;
+    }
   }
 
-  //信息分类
-  .footer-xxfl {
-  }
+  /*  //信息分类
+    .footer-xxfl {
+    }*/
 
   //帮助中心
   .footer-bzzx {
@@ -37,11 +40,6 @@ padding: 50px 0 20px 0;
 
   //服务支持
   .footer-fwzc {
-
-  }
-
-  //甘肃天奇
-  .footer-gstq{
 
   }
 
@@ -69,8 +67,8 @@ padding: 50px 0 20px 0;
 
 .footer-copyright-dx {
   //background-color: #000000;
-  background-color:darken(#fff,2%);
-  border-top:1px solid darken(#fff,13%);
+  background-color: darken(#fff, 2%);
+  border-top: 1px solid darken(#fff, 13%);
   p {
     text-align: center;
     margin: 20px 0;
