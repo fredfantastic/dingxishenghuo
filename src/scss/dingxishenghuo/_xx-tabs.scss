@@ -1,0 +1,57 @@
+/*！
+ * 标签面板
+ *
+ */
+
+// 标签面板v1
+.xx-tabs-v1{
+  margin-left: -15px;
+  margin-right:-15px;
+  .nav-tabs{
+    border: none;
+    background: none;
+    border-bottom: solid 2px $theme;
+    > li > a{
+      padding:8px 15px;
+      border: none;
+      border-radius: 0;
+      &:hover{
+        background: $theme;
+        color: #fff;
+      }
+    }
+    > .active{
+      a,a:hover,a:focus{
+        color: #fff;
+        border: none;
+        background: $theme;
+        border-radius: 0;
+      }
+    }
+
+    .more {
+      &:link, &:visited {
+        background: transparent;
+      }
+      &:hover{
+        background: $theme;
+        //color:#337ab7;
+      }
+    }
+  }
+
+  .tab-content{
+    padding:10px 15px 0 15px;
+    ul li{
+      line-height: 25px;
+    }
+
+    .time{
+      float: right;
+      padding-left: 10px;
+      font-size: 12px;
+      color:lighten(#555,30%);
+      letter-spacing: -0.15em;
+    }
+  }
+}
