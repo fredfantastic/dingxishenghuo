@@ -11,6 +11,13 @@
     border: none;
     background: none;
     border-bottom: solid 2px $theme;
+    .cat-title{
+      padding: 6px 15px;
+      border: none;
+      border-radius: 0;
+      font-size: 1.2em;
+      color:$theme;
+    }
     > li > a{
       padding:8px 15px;
       border: none;
@@ -44,6 +51,14 @@
     padding:10px 15px 0 15px;
     ul li{
       line-height: 25px;
+    }
+    ul li a{
+      &:hover{
+        color:$theme;
+      }
+      i.fa{
+        padding-right: 8px;
+      }
     }
 
     .time{
