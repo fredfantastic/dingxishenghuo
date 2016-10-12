@@ -1,0 +1,12 @@
+/*！
+ * 页面广告样式
+ *
+ */
+
+.huodong-v1{
+  background: #fff;
+  @include clearfix;
+  a{
+    text-decoration: none;
+  }
+}

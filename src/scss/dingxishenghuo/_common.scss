@@ -26,3 +26,82 @@ body{
 .bg-white{
   background-color: #fff;
 }
+
+
+
+// thumbnail dx
+.thumbnail-dx {
+  display: block;
+  padding: 0;
+  margin-top:10px;
+  margin-bottom: 10px;
+  line-height: $line-height-base;
+  background-color: transparent;
+  //border: 1px solid $thumbnail-border;
+
+  border-radius: 0;
+  @include transition(border .2s ease-in-out);
+
+  border-bottom:2px solid #eee;
+  &:hover{
+    border-bottom: 2px solid $theme;
+  }
+
+  > img,
+  a > img {
+    @include img-responsive;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // [converter] extracted a&:hover, a&:focus, a&.active to a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active
+
+  // Image captions
+  .caption {
+    text-align: center;
+    padding: 9px 0 0 9px;
+    //padding:0;
+    color: $thumbnail-caption-color;
+    h4{
+      margin: 0;
+      font-size: 1.1em;
+    }
+    p{
+      color:#777;
+      font-size: 12px;
+      margin:5px 0;
+      font-style: italic;
+    }
+  }
+}
+
+.headline{
+  padding-top:15px;
+  display: block;
+  border-bottom: 1px solid #e4e9f0;
+  h2{
+    margin: 0 0 -2px 0;
+    padding-bottom: 5px;
+    display: inline-block;
+    border-bottom: 3px solid $theme;
+    font-size: 1.2em;
+    color: $theme;
+  }
+  .owl-navigation{
+    //margin-bottom: 10px;
+    top: -5px;
+    position: relative;
+    text-align: right;
+    //font-size: 18px;
+  }
+}
+
+
+.owl-btn {
+  color: #777;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 2px 9px;
+  text-align: center;
+  background: #f5f5f5;
+}

@@ -1,0 +1,14 @@
+/*！
+ * 页面广告样式
+ *
+ */
+
+.ads-v1{
+  @include clearfix;
+  //background: #fff;
+  img{
+    @include img-responsive();
+    margin-bottom: 5px;
+    margin-top:5px;
+  }
+}
