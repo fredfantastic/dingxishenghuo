@@ -12,14 +12,15 @@
   h3 {
     font-size: 1.5em;
     margin: 15px;
+    font-weight: 600;
 
   }
+
   //作者信息
   .author-information {
     background-color: #ffffff;
     margin-top: 10px;
-  border-top:2px solid$theme;
-    border-bottom:1px solid#DCDEE1;
+    border-bottom: 1px solid #DCDEE1;
     /* border-left:1px solid#DCDEE1 ;
     border-right:1px solid#DCDEE1 ;*/
     .more-info {
@@ -52,7 +53,7 @@
               transition: all 0.5s ease-in-out;
             }
             i:hover {
-              transform: scale(1.5);
+              transform: scale(1.5) rotate(-13deg);
               color: darken($theme, 20%);
             }
           }
@@ -60,22 +61,26 @@
       }
     }
   }
+
   //人生格言
   .motto {
     background-color: #ffffff;
-    border-bottom:1px solid#DCDEE1;
+    border-bottom: 1px solid #DCDEE1;
     margin-top: 10px;
     p {
       font-size: 0.85em;
     }
   }
+
   //内容样式
   .content {
-    border-bottom:1px solid#DCDEE1;
+    border-top: 2px solid darken(#F8F8F8 ,5%);
+    border-bottom: 1px solid #DCDEE1;
     background-color: #ffffff;
     margin-top: 10px;
     .content-header {
       height: 60px;
+      border-bottom: 1px solid $theme;
       h3 {
         float: left;
       }
@@ -85,7 +90,163 @@
         list-style: none;
       }
     }
+    .content-body {
+      h4 {
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: 600;
+        margin: 15px;
+      }
+      p {
+        text-indent: 2em;
+        line-height: 2.1em;
+      }
+      .info {
+        margin-bottom: 10px;
+        background: rgba(254, 100, 65, 0.29);
+        color: #555;
+        text-align: center;
+        padding-right: 90px;
+        position: relative;
+        span {
+          display: inline-block;
+          margin: 0 3px;
+          height: 32px;
+          line-height: 32px;
+
+        }
+      }
+      .plbtn {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-left: 30px;
+        cursor: pointer;
+        i {
+          display: block;
+          background: $theme;
+          color: #FFF;
+          width: 30px;
+          line-height: 31px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          font-size: 18px;
+        }
+        b {
+          padding: 0 10px;
+          color: $theme;
+          font-size: 16px;
+          line-height: 30px;
+        }
+      }
+      .dianzan {
+        font-size: 1.6em;
+        color: #555;
+        text-align: center;
+        margin-bottom: 20px;
+        i {
+          margin: 5px;
+          transition: all 0.5s ease-in-out;
+        }
+        i:hover {
+          transform: scale(1.5);
+          color: $theme;
+        }
+      }
+    }
 
   }
+}
+
+//评论样式
+.comment {
+  //  box-shadow: 0 0 1px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #DCDEE1;
+  margin-top: 10px;
+  .comment-header {
+    padding: 8px;
+    line-height: 50px;
+    i {
+      font-size: 1.5em;
+      padding: 5px;
+    }
+    font-size: 1.3em;
+  }
+  .comment-body {
+    form {
+      border: #5bac41 solid 1px;
+      #msg {
+        width: 98%;
+        height: 90px;
+        padding: 5px 1%;
+        border: 0;
+      }
+      .plbar {
+        line-height: 30px;
+        padding: 5px;
+        border-top: #EEE solid 1px;
+        margin-top: 13px;
+        text-align: right;
+        button {
+          background-color: #4cab2e;
+          i {
+            color: #fff;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    .lmtit {
+      padding-bottom: 8px;
+      border-bottom:2px solid #EEEEEE ;
+      margin: 20px 0 10px 0;
+      color: #999;
+      font-size: 1.15em;
+      strong {
+        border-bottom: #5b951b solid 2px;
+        padding-bottom: 8px;
+      }
+    }
+    .more-info {
+      border-bottom: 1px solid #DCDEE1;
+      background-color: #fff;
+      padding: 8px 0 5px 0;
+      img {
+        float: left;
+        height: auto;
+        border: 0;
+        margin: 20px 15px 20px 0;
+        vertical-align: middle;
+      }
+      .detail {
+        overflow: hidden;
+        .upper {
+          overflow: hidden;
+          h3 {
+            float: left;
+            text-transform: uppercase;
+          }
+          ul {
+            float: right;
+            margin-top: 6px;
+            li i {
+              font-size: 1.2em;
+              margin: 3px 5px;
+              transition: all 0.5s ease-in-out;
+            }
+            i:hover {
+              font-size: 1.3em;
+              transform: scale(1.5) rotate(-13deg);
+              color: darken($theme, 20%);
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
 
