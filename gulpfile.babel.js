@@ -33,18 +33,18 @@ gulp.task('clean', () => del(['dist/*', '!dist/.git', 'src/styles/*', 'src/plugi
 }));
 
 // 复制bootstrap字体到dist根目录
-gulp.task('copy:fonts',()=>{
+gulp.task('copy:fonts', ()=> {
   return gulp.src([
-      'node_modules/bootstrap-sass/assets/fonts/**/*',
+    'node_modules/bootstrap-sass/assets/fonts/**/*',
   ])
       .pipe(size())
       .pipe(gulp.dest('dist/fonts'));
 });
 
 // 复制src/images目录到dist/images
-gulp.task('copy:images',()=>{
+gulp.task('copy:images', ()=> {
   return gulp.src([
-      'src/images/**/*'
+    'src/images/**/*'
   ])
       .pipe(imagemin({
         progressive: true,
@@ -60,6 +60,7 @@ gulp.task('copy:plugins', () => {
     'node_modules/jquery/dist/*.js',
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
     'node_modules/font-awesome/**/*.{css,map,oft,svg,eot,ttf,woff,woff2}',
+    'node_modules/owl-carousel-2-beta/dist/**/*.{css,js,png,gif}',
 
   ], {
     dot: true,
