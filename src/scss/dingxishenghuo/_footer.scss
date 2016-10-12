@@ -4,20 +4,22 @@
  */
 
 .footer-dx {
-  padding: 50px 0 20px 0;
+  padding: 30px 0 20px 0;
   //  background-color: #000000;
   background-color: #ffffff;
   //background-color:darken(rgb(248, 248, 248),15%);
   color: #555;
   h3 {
-    margin: 0 0 20px 0;
+    margin: 30px 0 10px 0;
     font-size: 1.2em;
+    color: #000000;
   }
+
   ul li {
     line-height: 30px;
     a {
-      font-size: 1.1em;
-      color: #566266;
+      font-size: 1.0em;
+      color: #555;
     }
   }
 
@@ -27,11 +29,13 @@
       color: #F12E01;
       font-size: 15px;
     }
-  }
+    p{
+      font-size: 1.0em;
+      color: #555;
+    }
 
-  /*  //信息分类
-    .footer-xxfl {
-    }*/
+
+  }
 
   //帮助中心
   .footer-bzzx {
@@ -40,7 +44,6 @@
 
   //服务支持
   .footer-fwzc {
-
   }
 
   //微信公众号
