@@ -8,5 +8,16 @@
   @include clearfix;
   a{
     text-decoration: none;
+    .tp {
+      overflow: hidden;
+      img {
+        transition: all 0.8s ease-in-out;
+      }
+      img:hover {
+        opacity: 0.8;
+     //transform: scale(1.1) rotate(-8deg);
+    transform: scale(1.2);
+      }
+    }
   }
 }
