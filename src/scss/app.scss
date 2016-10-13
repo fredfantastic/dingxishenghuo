@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/*！
+ * 定西生活网css文件
+ * 甘肃天奇
+ * 2016-10-11
+ */
+
+// bootstrap-sass样式
+@import "bootstrap/bootstrap-custom";
+
+// custom scss
+@import "dingxishenghuo/variables";
+@import "dingxishenghuo/common";
+
+// 导航样式
+@import "dingxishenghuo/nav";
+
+// 首页栏目
+@import "dingxishenghuo/cat-nav";
+
+// 标签面板
+@import "dingxishenghuo/xx-tabs";
+
+// 页面广告
+@import "dingxishenghuo/ads";
+
+// 活动
+@import "dingxishenghuo/huodong";
+
+
+// 积分商城样式
+@import "dingxishenghuo/jifenchangcheng";
+
+// 资讯页样式
+
+//YANJF123 Start
+// 资讯内容页样式
+@import "dingxishenghuo/zixun-content";
+
+//页脚样式
+@import "dingxishenghuo/footer";
+
