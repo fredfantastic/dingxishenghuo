@@ -54,8 +54,6 @@ body{
     margin-right: auto;
   }
 
-  // [converter] extracted a&:hover, a&:focus, a&.active to a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active
-
   // Image captions
   .caption {
     text-align: center;
@@ -77,7 +75,7 @@ body{
 }
 
 .headline{
-  padding-top:15px;
+  padding-top:10px;
   display: block;
   border-bottom: 1px solid #e4e9f0;
   h2{
@@ -90,19 +88,37 @@ body{
   }
   .owl-navigation{
     //margin-bottom: 10px;
-    top: -5px;
+    top: -3px;
     position: relative;
     text-align: right;
     //font-size: 18px;
   }
 }
 
+.zixun-index-v1{
+  @include clearfix;
+  background-color: #fff;
+  padding:5px 15px;
+  .content{
+    padding:15px 0 0 0;
+    ul li{
+      line-height: 24px;
+    }
+    ul li a{
+      &:hover{
+        color: $theme;
+      }
+    }
+    .time{
+      color: lighten(#777,25%);
+      float: right;
+      letter-spacing: -0.1em;
+      font-size: 12px;
+    }
+    .category{
+      color: lighten($theme,20%);
+    }
+  }
 
-.owl-btn {
-  color: #777;
-  cursor: pointer;
-  font-size: 18px;
-  padding: 2px 9px;
-  text-align: center;
-  background: #f5f5f5;
+
 }
