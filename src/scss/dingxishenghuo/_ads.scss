@@ -7,12 +7,12 @@
   @include clearfix;
   //background: #fff;
   .col-lg-3{
-    padding:0;
+    //padding:0;
   }
   img{
     @include img-responsive();
     margin-bottom: 5px;
     margin-top:5px;
-    border-right: 3px solid transparent;
+    //border-right: 5px solid $body-bg-color;
   }
 }

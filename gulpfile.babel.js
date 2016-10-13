@@ -74,6 +74,16 @@ gulp.task('copy:plugins', () => {
       .pipe(gulp.dest('dist/plugins'));
 });
 
+// 复制非npm管理的插件
+gulp.task('copy:no-npm-plugins',()=>{
+  return gulp.src([
+      'src/no-npm-plugins/**/*',
+  ])
+      .pipe(newer('dist/no-npm-plugins'))
+      .pipe(size())
+      .pipe(gulp.dest('dist/no-npm-plugins'));
+});
+
 // 复制src根目录的html文件到dist根目录
 gulp.task('copy:html', () => {
   return gulp.src([
@@ -159,6 +169,7 @@ gulp.task('default', ['clean'], cb => {
       ['copy:fonts'],
       ['copy:images'],
       ['copy:plugins'],
+      ['copy:no-npm-plugins'],
       ['copy:html'],
       ['styles'],
       ['scripts'],
