@@ -2,7 +2,6 @@
  * 新闻资讯内容页样式
  *
  */
-
 .news {
   margin: 70px 0 20px 0;
   .path-nav {
@@ -10,10 +9,24 @@
     background-color: #ffffff;
   }
   h3 {
-    font-size: 1.5em;
-    margin: 15px;
+    font-size: 1.2em;
     font-weight: 600;
+color: $theme;
 
+  }
+  .content-header {
+    height: 45px;
+    border-bottom: 1px solid #EEEEEE;
+    margin: 10px 0;
+    h3 {
+      float: left;
+      margin:10px 0 10px 0;
+    }
+    ul li {
+      margin: 15px;
+      float: right;
+      list-style: none;
+    }
   }
 
   //作者信息
@@ -53,7 +66,7 @@
               transition: all 0.5s ease-in-out;
             }
             i:hover {
-              transform: scale(1.5) rotate(-13deg);
+              transform: scale(1.5) rotate(13deg);
               color: darken($theme, 20%);
             }
           }
@@ -70,6 +83,7 @@
     p {
       font-size: 0.85em;
     }
+
   }
 
   //内容样式
@@ -78,18 +92,7 @@
     border-bottom: 1px solid #DCDEE1;
     background-color: #ffffff;
     margin-top: 10px;
-    .content-header {
-      height: 60px;
-      border-bottom: 1px solid $theme;
-      h3 {
-        float: left;
-      }
-      ul li {
-        margin: 15px;
-        float: right;
-        list-style: none;
-      }
-    }
+
     .content-body {
       h4 {
         text-align: center;
@@ -158,114 +161,96 @@
     }
 
   }
-}
 
-//评论样式
-.comment {
-  //  box-shadow: 0 0 1px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #DCDEE1;
-  margin-top: 10px;
-  .comment-header {
-    padding: 8px;
-    line-height: 50px;
-    i {
-      font-size: 1.5em;
-      padding: 5px;
-    }
-    font-size: 1.3em;
-  }
-  .comment-body {
-    form {
-      border: #5bac41 solid 1px;
-      #msg {
-        width: 98%;
-        height: 90px;
-        padding: 5px 1%;
-        border: 0;
-      }
-      .plbar {
-        line-height: 30px;
+  //评论样式
+  .comment {
+    //  box-shadow: 0 0 1px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #DCDEE1;
+    margin-top: 10px;
+    .comment-header {
+      padding: 8px;
+      line-height: 50px;
+      i {
+        font-size: 1.5em;
         padding: 5px;
-        border-top: #EEE solid 1px;
-        margin-top: 13px;
-        text-align: right;
-        button {
-          background-color: #4cab2e;
-          i {
-            color: #fff;
-            margin-right: 5px;
+      }
+      font-size: 1.3em;
+    }
+    .comment-body {
+      form {
+        border: #5bac41 solid 1px;
+        #msg {
+          width: 98%;
+          height: 90px;
+          padding: 5px 1%;
+          border: 0;
+        }
+        .plbar {
+          line-height: 30px;
+          padding: 5px;
+          border-top: #EEE solid 1px;
+          margin-top: 13px;
+          text-align: right;
+          button {
+            background-color: #4cab2e;
+            i {
+              color: #fff;
+              margin-right: 5px;
+            }
           }
         }
       }
-    }
-    .lmtit {
-      padding-bottom: 8px;
-      border-bottom: 2px solid #EEEEEE;
-      margin: 20px 0 10px 0;
-      color: #999;
-      font-size: 1.15em;
-      strong {
-        border-bottom: #5b951b solid 2px;
+      .lmtit {
         padding-bottom: 8px;
+        border-bottom: 2px solid #EEEEEE;
+        margin: 20px 0 10px 0;
+        color: #999;
+        font-size: 1.15em;
+        strong {
+          border-bottom: #5b951b solid 2px;
+          padding-bottom: 8px;
+        }
       }
-    }
-    .more-info {
-      border-bottom: 1px solid #DCDEE1;
-      background-color: #fff;
-      padding: 8px 0 5px 0;
-      img {
-        float: left;
-        height: auto;
-        border: 0;
-        margin: 20px 15px 20px 0;
-        vertical-align: middle;
-      }
-      .detail {
-        overflow: hidden;
-        .upper {
+      .more-info {
+        border-bottom: 1px solid #DCDEE1;
+        background-color: #fff;
+        padding: 8px 0 5px 0;
+        img {
+          float: left;
+          height: auto;
+          border: 0;
+          margin: 20px 15px 20px 0;
+          vertical-align: middle;
+        }
+        .detail {
           overflow: hidden;
-          h3 {
-            float: left;
-            text-transform: uppercase;
-          }
-          ul {
-            float: right;
-            margin-top: 6px;
-            li i {
-              font-size: 1.2em;
-              margin: 3px 5px;
-              transition: all 0.5s ease-in-out;
+          .upper {
+            overflow: hidden;
+            h3 {
+              float: left;
+              text-transform: uppercase;
             }
-            i:hover {
-              font-size: 1.3em;
-              transform: scale(1.5) rotate(-13deg);
-              color: darken($theme, 20%);
+            ul {
+              float: right;
+              margin-top: 6px;
+              li i {
+                font-size: 1.2em;
+                margin: 3px 5px;
+                transition: all 0.5s ease-in-out;
+              }
+              i:hover {
+                font-size: 1.3em;
+                transform: scale(1.5) rotate(-13deg);
+                color: darken($theme, 20%);
+              }
             }
           }
         }
       }
     }
-  }
 
+  }
 }
 
 
-//活动图片
-/*
-.huodong-v1 {
-  .thumbnail-dx {
-    .tp {
-      overflow: hidden;
-      img {
-        transition: all 0.8s ease-in-out;
-      }
-      img:hover {
-        opacity: 0.8;
-        //transform: scale(1.3) rotate(-13deg);
-        transform: scale(1.3);
-      }
-
-    }
-  }
-}*/
