@@ -85,6 +85,7 @@
     .icon-bar {
       background-color: #fff;
     }
+    @include navbar-vertical-align-dx(34px);
   }
 
   .navbar-collapse,
