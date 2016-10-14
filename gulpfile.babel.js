@@ -21,6 +21,7 @@ import uglify from 'gulp-uglify';
 import del from 'del';
 import runSequence from 'run-sequence';
 import imagemin from 'gulp-imagemin';
+import include from 'gulp-file-include';
 //import cssnano from 'gulp-cssnano';
 
 //import cssnano from 'gulp-cssnano';
@@ -90,6 +91,10 @@ gulp.task('copy:html', () => {
     'src/**/*.html',
   ])
       .pipe(newer('dist'))
+      .pipe(include({
+        prefix: '@@',
+        basepath: '@file',
+      }))
       .pipe(size())
       .pipe(gulp.dest('dist'));
 });
