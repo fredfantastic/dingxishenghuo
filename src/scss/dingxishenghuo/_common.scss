@@ -20,7 +20,11 @@ body{
 
 .btn-dx{
   background: #fff;
-  color:#FE6441;
+  color:$theme;
+}
+.btn-dx-theme{
+  background: $theme;
+  color:#fff;
 }
 
 .bg-white{
@@ -76,6 +80,7 @@ body{
 
 .headline{
   padding-top:10px;
+  margin:0 15px 10px 15px;
   display: block;
   border-bottom: 1px solid #e4e9f0;
   h2{
@@ -95,14 +100,75 @@ body{
   }
 }
 
+//
+// Jumbotron-dx
+//
+.jumbotron-dx {
+  padding-top:    $jumbotron-padding;
+  padding-bottom: $jumbotron-padding;
+  margin-bottom: $jumbotron-padding;
+  color: $jumbotron-color;
+  background-color: #fff;
+
+  h1,
+  .h1 {
+    color: $jumbotron-heading-color;
+  }
+
+  p {
+    margin-bottom: ($jumbotron-padding / 2);
+    font-size: $jumbotron-font-size;
+    font-weight: 200;
+  }
+
+  > hr {
+    border-top-color: darken($jumbotron-bg, 10%);
+  }
+
+  .container &,
+  .container-fluid & {
+    border-radius: 0; // Only round corners at higher resolutions if contained in a container
+    padding-left:  ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  @media screen and (min-width: $screen-sm-min) {
+    padding-top:    ($jumbotron-padding * 1);
+    padding-bottom: ($jumbotron-padding * 1);
+
+    .container &,
+    .container-fluid & {
+      padding-left:  ($jumbotron-padding * 2);
+      padding-right: ($jumbotron-padding * 2);
+    }
+
+    h1,
+    .h1 {
+      font-size: $jumbotron-heading-font-size;
+    }
+  }
+}
+
+
+
+/*首页资讯样式*/
 .zixun-index-v1{
   @include clearfix;
   background-color: #fff;
-  padding:5px 15px;
+  padding-bottom: 15px;
   .content{
-    padding:15px 0 0 0;
+    ul{
+      margin-top: 15px;
+      @media (min-width: $screen-lg) {
+        margin-top: 0;
+      }
+    }
     ul li{
-      line-height: 24px;
+      line-height: $base-line-height;
     }
     ul li a{
       &:hover{
@@ -119,6 +185,47 @@ body{
       color: lighten($theme,20%);
     }
   }
+}
 
-
+.carousel-dx{
+  .carousel-indicators {
+    height:30px;
+    line-height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    right: 20px;
+    z-index: 15;
+    width:auto;
+    margin-left: -30%;
+    padding-left: 0;
+    margin-bottom: 0;
+    li{
+      border-radius: 0;
+      //border: 1px solid $theme;
+    }
+    .active {
+      background-color: $theme;
+    }
+  }
+  .carousel-inner{
+    > .item{
+      > img{
+        width: 100%;
+      }
+    }
+    p.title{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      @include opacity(0.5);
+      background: #000;
+      margin: 0;
+      width:100%;
+      height:30px;
+      line-height: 30px;
+      padding-left: 15px;
+      color:#fff;
+    }
+  }
 }

@@ -3,13 +3,17 @@
  *
  */
 .huodong-v2{
-  padding:8px 0;
+  padding:10px 0 0 0;
   *{
     font-family: $base-family !important;
   }
-  .cbp-l-slider-title-block div{
-    font-size: 1.2em;
-    color:$theme;
-    border-bottom: 2px solid $theme;
+  .cbp-l-slider-title-block{
+    margin-bottom: 10px;
+    >div{
+      font-size: 1.2em;
+      color:$theme;
+      border-bottom: 3px solid $theme;
+
+    }
   }
 }

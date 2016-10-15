@@ -50,7 +50,7 @@
   .tab-content{
     padding:10px 15px 0 15px;
     ul li{
-      line-height: 25px;
+      line-height: $base-line-height;
     }
     ul li a{
       &:hover{
