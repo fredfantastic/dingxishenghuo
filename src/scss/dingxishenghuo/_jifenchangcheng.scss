@@ -4,11 +4,9 @@
  */
 
 .jifenchangcheng-index-v1 {
-  padding: 8px 0 15px 0;
-  > .headline {
-    margin-bottom: 15px;
-    padding-top: 3px;
-  }
+  background: #fff;
+  @include clearfix;
+  padding-bottom: 15px;
   *{
     font-family:$base-family !important; ;
   }

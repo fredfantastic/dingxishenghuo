@@ -1,6 +1,6 @@
 /**
  * Created by Administrator on 2016/10/10.
- * gulp构建工具
+ * gulp构建
  */
 
 'use strict';
